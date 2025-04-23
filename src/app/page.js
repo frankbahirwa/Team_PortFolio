@@ -3,7 +3,8 @@
 "use client"
 
 import GitHubUser from "../components/GitHubUser";
-import Testimonials from "@/components/testmonial";
+import TestimonialsSection from "@/components/testmonial";
+import ContactSection from "@/components/contactSection";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       {/* Example: Passing a GitHub username */}
       <div className="space-y-8">
         <GitHubUser username="frankbahirwa" />
-        <Testimonials />
+        <TestimonialsSection />
+        <ContactSection />
       </div>
     </div>
   );
