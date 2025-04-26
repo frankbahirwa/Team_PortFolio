@@ -15,14 +15,14 @@ export default function Navbar() {
         <div className="text-blue-600  font-bold text-3xl">CareerCraft</div>
 
         <div className="hidden md:flex space-x-6 text-lg justify-center flex-grow">
-          <Link href="/" className="text-black font-medium hover:text-blue-600 transition-all">Home</Link>
-          <Link href="/about" className="text-black font-medium hover:text-blue-600 transition-all">About Us</Link>
-          <Link href="/contact" className="text-black font-medium hover:text-blue-600 transition-all">Contact Us</Link>
-          <Link href="/faqs" className="text-black font-medium hover:text-blue-600 transition-all">FAQs</Link>
+          <Link href="/" className="text-gray-500 font-medium hover:text-blue-600 transition-all">Home</Link>
+          <Link href="/about" className="text-gray-500 font-medium hover:text-blue-600 transition-all">About Us</Link>
+          <Link href="/contact" className="text-gray-500 font-medium hover:text-blue-600 transition-all">Contact Us</Link>
+          <Link href="/faqs" className="text-gray-500 font-medium hover:text-blue-600 transition-all">FAQs</Link>
         </div>
 
         <div className="ml-auto">
-          <Link href="/join" className="bg-blue-600 text-white px-4 py-3 px-3 rounded-full hover:bg-blue-700 transition-all">
+          <Link href="/join" className="bg-blue-600 text-white px-4 py-3 rounded-full hover:bg-blue-700 transition-all">
             Join Us
           </Link>
         </div>
