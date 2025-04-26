@@ -1,5 +1,6 @@
 import Image from "next/image";
 import About from "@/components/about";
+import imag from '../../public/images/Frame.jpg'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/images/frame.jpg" // Replace with your image path
+          src={imag} // Replace with your image path
           alt="Group of people working together"
           layout="fill"
           objectFit="cover"
@@ -71,7 +72,7 @@ export default function Home() {
           {/* Top Left Image */}
           <div className="absolute top-0 left-0 w-32 h-32 md:w-40 md:h-40">
             <Image
-              src="/images/frank.jpg"
+              src={imag}
               alt="Team 1"
               layout="fill"
               objectFit="cover"
@@ -82,7 +83,7 @@ export default function Home() {
           {/* Top Right Image */}
           <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40">
             <Image
-              src="/images/frank.jpg"
+              src={imag}
               alt="Handshake"
               layout="fill"
               objectFit="cover"
@@ -93,7 +94,7 @@ export default function Home() {
           {/* Bottom Left Image */}
           <div className="absolute bottom-0 left-0 w-32 h-32 md:w-40 md:h-40">
             <Image
-              src="/images/frank.jpg"
+              src={imag}
               alt="Laptop"
               layout="fill"
               objectFit="cover"
@@ -103,8 +104,8 @@ export default function Home() {
           
           {/* Bottom Right Image */}
           <div className="absolute bottom-0 right-0 w-32 h-32 md:w-40 md:h-40">
-            <Image
-              src="/images/frank.jpg"
+            <Image 
+              src={imag}
               alt="Meeting"
               layout="fill"
               objectFit="cover"
@@ -188,7 +189,7 @@ export default function Home() {
           <div className="bg-white lg:w-3/3  rounded-2xl shadow-lg overflow-hidden">
             <div className="w-full h-64">
               <img
-                src="/images/frank.jpg"
+                src="/images/Frank.jpg"
                 alt="Professional in a suit"
                 className="w-full h-full object-cover"
               />
