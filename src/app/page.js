@@ -1,6 +1,19 @@
 import Image from "next/image";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+import Logout from "@/components/logout";
+
+
+export default async function Home() {
+
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/login"); // redirect to login if not authenticated
+  }
+
   return (
     <div className="relative min-h-screen w-full">
       {/* Background Image with Overlay */}
@@ -34,9 +47,7 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="mt-6 flex space-x-4">
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600">
-              Sign in now
-            </button>
+             <Logout />            
             <button className="text-white underline hover:text-blue-300">
               View all roles
             </button>
