@@ -9,20 +9,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white border shadow-xl py-3 font-sans">
+    <nav className="fixed  w-full z-50 bg-white  shadow-xl py-3 font-sans lg:px-24">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-blue-600  font-bold text-3xl">CareerCraft</div>
+        <div className="text-blue-600  font-bold text-xl">CareerCraft</div>
 
-        <div className="hidden md:flex space-x-6 text-lg justify-center flex-grow">
-          <Link href="/" className="text-gray-500 font-medium hover:text-blue-600 transition-all">Home</Link>
-          <Link href="/about" className="text-gray-500 font-medium hover:text-blue-600 transition-all">About Us</Link>
-          <Link href="/contact" className="text-gray-500 font-medium hover:text-blue-600 transition-all">Contact Us</Link>
-          <Link href="/faqs" className="text-gray-500 font-medium hover:text-blue-600 transition-all">FAQs</Link>
+        <div className="hidden md:flex space-x-6 text-md justify-center flex-grow">
+          <Link href="/" className="text-gray-800 font-medium hover:text-blue-600 transition-all">Home</Link>
+          <Link href="/about" className="text-gray-800 font-medium hover:text-blue-600 transition-all">About Us</Link>
+          <Link href="/contact" className="text-gray-800 font-medium hover:text-blue-600 transition-all">Contact Us</Link>
+          <Link href="/faqs" className="text-gray-800 font-medium hover:text-blue-600 transition-all">FAQs</Link>
         </div>
 
         <div className="ml-auto">
-          <Link href="/join" className="bg-blue-600 text-white px-4 py-3 rounded-full hover:bg-blue-700 transition-all">
+          <Link href="/join" className="bg-blue-600 text-white px-9 py-3 rounded-full hover:bg-blue-700 transition-all">
             Join Us
           </Link>
         </div>

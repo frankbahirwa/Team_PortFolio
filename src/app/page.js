@@ -1,13 +1,14 @@
 import Image from "next/image";
 import About from "@/components/about";
 import imag from '../../public/images/Frame.jpg';
+import left from '../../public/images/left.jpg';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative min-h-screen w-full">
-        <div className="absolute inset-0">
+      <section>
+        <div className="absolute inset-0 md:h-full">
           <Image
             src={imag}
             alt="Group of people working together"
@@ -18,52 +19,54 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto flex flex-col justify-center min-h-screen px-4 sm:px-6 lg:px-8 text-white">
-          <div className="mt-10 max-w-3xl lg:mt-24">
-            <div className="flex items-center gap-2">
-              <p className="text-blue-500 text-4xl sm:text-5xl">//</p>
-              <p className="text-lg sm:text-xl md:text-2xl font-bold capitalize">
-                Experience the best way to connect talent with opportunity
-              </p>
-            </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mt-6 leading-tight capitalize">
-              Where Top Talent <br /> Meets Leading Employers
-            </h1>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg">
-              Your bridge between talent and opportunity is finally here. <br />
-              Designed to empower job seekers and simplify for companies.
+        <div className="relative z-10 py-10 px-22 text-white">
+          <div className="space-y-5 w-2/3">  
+          <p>
+            <span className="text-4xl font-bold text-[#4477F6]">//</span> 
+           <span className="text-lg text-gray-300">Experience the best way to connect talent with opportunity</span> 
+         
             </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-semibold">
-                Sign in now
+            <h1 className="text-6xl  font-black">
+            Where Top Talents  Meets Leading  Employers
+            </h1>
+
+            <p className="text-lg font-light text-gray-300">
+            Your bridge between talent and opportunity is finally here.<br /> Designed to empower job seekers and <br /> simplify hiring for companies.
+            </p>
+            <div>
+              <button className="bg-amber-600  text-white py-3 px-10 rounded-full font-mono hover:cursor-pointer">
+                Join Now
               </button>
-              <button className="underline text-white hover:text-blue-300">
-                View all roles
+              <button className="text-white py-3 px-6 ml-10 rounded-full font-medium hover:text-amber-600 hover:cursor-pointer">
+               <u>Learn More</u> 
               </button>
             </div>
-          </div>
         </div>
-
-        <div className="absolute bottom-0 w-full bg-blue-600 text-white py-3">
-          <div className="flex flex-wrap justify-center gap-3 text-xs sm:text-sm font-semibold">
-            <a href="#" className="hover:underline">JOB MATCHING ENGINE</a>
-            <span>|</span>
-            <a href="#" className="hover:underline">TALENT MARKETPLACE</a>
-            <span>|</span>
-            <a href="#" className="hover:underline">EMPLOYER BRANDING PLATFORM</a>
-          </div>
         </div>
-      </div>
-
+      </section>
+      <br /> 
+      <div className=" bottom-0 w-full bg-[#4477F6] text-white px-10 py-3">
+         <ul className="flex  text-lg font-bold space-x-22 justify-center">
+          <span className="font-black">|</span>  
+          <li>Job Matching Engine </li>
+          <span>|</span>
+          <li>Talent Marketplace </li>
+          <span>|</span>
+          <li>Employer Branding Platform</li>
+          <span>|</span>
+         </ul>
+        </div>
       {/* Image & Stats Section */}
-      <div className="bg-gray-100 py-12">
+
+
+      <section className="bg-gray-100 py-12 px-16">
         <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 px-4">
           {/* Text Section */}
           <div className="text-center lg:text-left flex-1">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-              Career Development & Resources Hub
+            <span className="text-black">Career Development &</span>   <br /> Resources Hub
             </h2>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600 w-3/4">
               Facilitates messaging, interview scheduling, and updates between candidates and employers.
               Always showcase their culture, mission, and benefits through customized profiles.
             </p>
@@ -85,21 +88,15 @@ export default function Home() {
 
           {/* Image Collage */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-            <div className="absolute inset-0 bg-gray-200 rounded-full" />
-            {["top-0 left-0", "top-0 right-0", "bottom-0 left-0", "bottom-0 right-0"].map((pos, idx) => (
-              <div key={idx} className={`absolute ${pos} w-1/2 h-1/2`}>
-                <Image
-                  src={imag}
-                  alt={`Team ${idx + 1}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-            ))}
+            <div className="absolute" />
+           <img
+           className="w-full"
+              src={left.src}
+              alt="no image found"
+              />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Services Section */}
       <div className="bg-gray-200 py-12">
