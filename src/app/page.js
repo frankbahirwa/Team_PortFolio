@@ -1,21 +1,20 @@
 import Image from "next/image";
 import About from "@/components/about";
 import imag from '../../public/images/Frame.jpg';
-import left from '../../public/images/left.jpg';
+import left from '../../public/images/left.png';
+import Card from "@/components/card";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section>
+      <section className="">
         <div className="absolute inset-0 md:h-full">
           <Image
             src={imag}
             alt="Group of people working together"
             layout="fill"
             objectFit="cover"
-            className="opacity-50"
-            priority
           />
         </div>
 
@@ -44,8 +43,9 @@ export default function Home() {
         </div>
         </div>
       </section>
-      <br /> 
-      <div className=" bottom-0 w-full bg-[#4477F6] text-white px-10 py-3">
+      <br />
+      <section>
+        <div className=" bottom-0 w-full bg-[#4477F6] text-white px-10 py-3">
          <ul className="flex  text-lg font-bold space-x-22 justify-center">
           <span className="font-black">|</span>  
           <li>Job Matching Engine </li>
@@ -56,96 +56,37 @@ export default function Home() {
           <span>|</span>
          </ul>
         </div>
+      </section>
+      
       {/* Image & Stats Section */}
 
+<section className="bg-white py-12 flex justify-center content-center gap-20">
+  <div className="w-96">
+      <img src={left.src} />
+  </div>
+  <div className="space-y-6 w-md content-center align-middle">
+    <h1 className="text-black font-bold text-4xl">
+      Career Development<br/> <span className="text-[#4477F6]">& Resources Hub</span> 
+    </h1>
+    <p className="text-lg text-gray-800">Facilitates messaging, interview scheduling,and updates between candidates and employers.</p>
+    <p className="text-lg text-gray-800">Allows companies to showcase their culture, mission, and benefits through customized profiles.</p>
+    <div>
+      
+    </div>
+  </div>
+</section>
 
-      <section className="bg-gray-100 py-12 px-16">
-        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 px-4">
-          {/* Text Section */}
-          <div className="text-center lg:text-left flex-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-            <span className="text-black">Career Development &</span>   <br /> Resources Hub
-            </h2>
-            <p className="mt-4 text-gray-600 w-3/4">
-              Facilitates messaging, interview scheduling, and updates between candidates and employers.
-              Always showcase their culture, mission, and benefits through customized profiles.
-            </p>
-            <div className="mt-6 flex justify-center lg:justify-start gap-6">
-              <div>
-                <p className="text-2xl font-bold text-blue-900">1000+</p>
-                <p className="text-gray-600">Started working</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-blue-900">1000+</p>
-                <p className="text-gray-600">On waiting list</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-blue-900">1000+</p>
-                <p className="text-gray-600">Registered</p>
-              </div>
-            </div>
-          </div>
 
-          {/* Image Collage */}
-          <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-            <div className="absolute" />
-           <img
-           className="w-full"
-              src={left.src}
-              alt="no image found"
-              />
-          </div>
+     <section className="bg-[#EFEEEE] px-12 py-11">
+     <div className="text-lg text-gray-800">
+      <h1 className="align-middle font-semibold"><span className="text-5xl font-bold text-[#4477F6]">//</span> Our Service </h1>
+      <div className="flex gap-5">
+        <h2 className="text-4xl font-bold">Best Of Our <span className="text-[#4477F6]">Services</span></h2>
         </div>
-      </section>
 
-      {/* Services Section */}
-      <div className="bg-gray-200 py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-10">
-            <div className="flex items-center">
-              <p className="text-4xl sm:text-5xl text-blue-500">//</p>
-              <h2 className="text-2xl sm:text-3xl font-bold ml-2">Our Services</h2>
-            </div>
-            <button className="mt-4 sm:mt-0 bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full font-semibold">
-              Join Now
-            </button>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {[1, 2, 3].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="w-full h-52">
-                  <img
-                    src={`/images/frank.jpg`}
-                    alt="Service"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-blue-600 mb-2">
-                    {item === 1 ? "Smart Job Matching" : item === 2 ? "Backend Systems" : "Web Design"}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Connect with job opportunities that align with your skills, experience, and goals — instantly.
-                  </p>
-                  <a href="#" className="text-blue-500 font-semibold flex items-center hover:underline">
-                    Learn More
-                    <svg
-                      className="w-5 h-5 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Card />
       </div>
+     </section>
     </>
   );
 }
