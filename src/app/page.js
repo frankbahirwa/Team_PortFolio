@@ -4,7 +4,8 @@ import imag from '../../public/images/Frame.jpg';
 import left from '../../public/images/left.png';
 import Card from "@/components/card";
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <>
       {/* Hero Section */}
