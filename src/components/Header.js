@@ -4,10 +4,21 @@ import { useState } from "react";
 import Link from "next/link";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../app/api/auth/[...nextauth]/route";
+import { signOut } from "next-auth/react";
 
-export default function Navbar() {
+
+export default async function Navbar() {
+
   const [isOpen, setIsOpen] = useState(false);
-
+  const [logout, setLogout] = useState(false);
+  
+  const session = await getServerSession(authOptions);
+  
+    if (!session) {
+      setLogout(true) // redirect to login if not authenticated
+    }
   return (
     <nav className="fixed  w-full z-50 bg-white  shadow-xl py-3 font-sans lg:px-24">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -22,9 +33,29 @@ export default function Navbar() {
         </div>
 
         <div className="ml-auto">
-          <Link href="/join" className="bg-blue-600 text-white px-9 py-3 rounded-full hover:bg-blue-700 transition-all">
+         
+         {logout ?
+           <>
+
+            <Link href="/register" className="bg-blue-600 text-white px-9 py-3 rounded-full hover:bg-blue-700 transition-all">
             Join Us
-          </Link>
+          </Link>          
+ 
+           </>  
+          : 
+          
+          
+           <button
+               onClick={() => signOut({ callbackUrl: "/login" })}
+               className="px-4 py-2 bg-red-500 text-white rounded-full"
+            >
+               Logout
+            </button>
+
+          
+          }
+
+          
         </div>
 
         <button className="md:hidden text-black text-3xl ml-4" onClick={() => setIsOpen(!isOpen)}>
