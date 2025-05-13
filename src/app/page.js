@@ -92,7 +92,7 @@ export default function Home() {
      
            {/* Our Skills Section */}
            <section
-             className="bg-white container mx-auto py-12 flex flex-col md:flex-row items-center gap-8 px-6 sm:px-1 md:px-1 lg:px-28"
+             className="bg-white  container mx-auto py-12 flex flex-col md:flex-row items-center gap-8 px-6 sm:px-1 md:px-1 lg:px-28"
            >
              <div className="md:w-1/2 w-full order-2 md:order-1">
                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">Our Skills</h3>

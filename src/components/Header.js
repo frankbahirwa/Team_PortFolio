@@ -17,6 +17,7 @@ export default function Navbar() {
           <Link href="/" className="text-gray-800 font-medium hover:text-blue-600 transition-all">Home</Link>
           <Link href="/about" className="text-gray-800 font-medium hover:text-blue-600 transition-all">About Us</Link>
           <Link href="/contact" className="text-gray-800 font-medium hover:text-blue-600 transition-all">Contact Us</Link>
+          <Link href="/team" className="text-gray-800 font-medium hover:text-blue-600 transition-all">Team</Link>
           <Link href="/faqs" className="text-gray-800 font-medium hover:text-blue-600 transition-all">FAQs</Link>
         </div>
 

@@ -1,24 +1,32 @@
 "use client";
+import Link from 'next/link';
 
-import React from 'react';
+ const teamMembers = [
+  {
+    name: "Baraka",
+    slug: "baraka",
+    description: "Connect with job opportunities that align with your skills.",
+    image: "/images/frank.jpg",
+  },
+  {
+    name: "Alice",
+    slug: "alice",
+    description: "A creative designer ready to transform ideas into visuals.",
+    image: "/images/frank.jpg",
+  },
+];
+
 
 const TeamPage = () => {
-  const teamMembers = Array(6).fill({
-    name: "Baraka",
-    description: "Connect with job opportunities that align with your skills.",
-    image: "/images/frank.jpg", 
-  });
-
-  const handleConnect = (name) => {
-    alert(`Connecting with ${name}...`); 
-  };
-
+  
+  
   return (
     <div className="bg-white  min-h-screen">
       {/* Header */}
       <div className="bg-blue-600 text-white text-center py-6">
         <h1 className="text-4xl font-bold">Meet the Team</h1>
       </div>
+     
 
       {/* Team Grid */}
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -44,28 +52,9 @@ const TeamPage = () => {
                 <p className="text-gray-600 text-center mt-2 px-4">
                   {member.description}
                 </p>
+                 
+                 <Link href={`/profile/${member.slug}`}>Profile</Link>
 
-                {/* Connect Button */}
-                <button
-                  onClick={() => handleConnect(member.name)}
-                  className="mt-4 flex items-center justify-center mx-auto bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-                >
-                  <span>Connect</span>
-                  <svg
-                    className="ml-2 w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    ></path>
-                  </svg>
-                </button>
 
                 {/* Icons */}
                 <div className="absolute bottom-6 flex space-x-3">
