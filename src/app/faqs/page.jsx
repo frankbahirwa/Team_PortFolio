@@ -44,9 +44,9 @@ export default function FAQ() {
           We collaborate with clients around the world and are comfortable managing projects
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-12">
           {questions.map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow hover:shadow-md transition-all duration-300">
+            <div key={index} className="bg-[#F0F0F0] p-6  rounded-xl shadow hover:shadow-md transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <FaQuestionCircle className="text-blue-500 text-3xl mt-1" />
                 <div>
